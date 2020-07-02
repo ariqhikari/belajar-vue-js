@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Directive v-model in textarea</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        <br>
+        {{ message }}
+        <br>
+        <textarea cols="30" rows="10" v-model="textarea"></textarea>
+        <br>
+        <p style="white-space:pre-line">{{ textarea }}</p>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

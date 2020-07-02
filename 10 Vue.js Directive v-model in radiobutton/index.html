@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Directive v-model in radiobutton</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="text">
+            <input type="text" v-model="message">
+            <br>
+            {{ message }}
+            <br>
+        </div>
+        <div class="textarea">
+            <textarea cols="30" rows="10" v-model="textarea"></textarea>
+            <br>
+            <p style="white-space:pre-line">{{ textarea }}</p>
+            <br>
+        </div>
+        <div class="radiobutton">
+            <input type="radio" v-model="radiobutton" value="option-1"> Option 1
+            <br>
+            <input type="radio" v-model="radiobutton" value="option-2"> Option 2
+            <br>
+            <p>Your choice is : {{ radiobutton }}</p>
+            <br>
+        </div>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
