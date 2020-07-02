@@ -3,6 +3,7 @@ var vue = new Vue({
     data: {
         message: '',
         textarea: '',
-        radiobutton: ''
+        radiobutton: '',
+        checkbox: []
     },
 })

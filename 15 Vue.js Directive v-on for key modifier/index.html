@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Directive v-on for key modifier</title>
+</head>
+
+<body>
+    <div id="app">
+        <label for="">Press Enter Key</label>
+        <input type="text" v-on:keyup.enter="message = 'You pressing enter key'">
+        <br>
+        <label for="">Press Any Key</label>
+        <input type="text" @keyup.esc="escKey" @keyup.space="spaceKey" @keyup.up="upKey" @keyup.down="downKey"
+            @keyup.65="aKey">
+        <br>
+        <p>{{ message }}</p>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

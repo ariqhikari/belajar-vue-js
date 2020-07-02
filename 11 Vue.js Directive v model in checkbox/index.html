@@ -29,6 +29,21 @@
             <p>Your choice is : {{ radiobutton }}</p>
             <br>
         </div>
+        <div class="checkbox">
+            <label for="">Wacthing Movie</label>
+            <input type="checkbox" value="watching-movie" v-model="checkbox">
+            <br>
+            <label for="">Playing Game</label>
+            <input type="checkbox" value="playing-game" v-model="checkbox">
+            <br>
+            <label for="">Swimming</label>
+            <input type="checkbox" value="swimming" v-model="checkbox">
+            <br>
+            <p>My hobbies are : {{ checkbox }}</p>
+            <ul>
+                <li v-for="hobby in checkbox">{{ hobby }}</li>
+            </ul>
+        </div>
     </div>
 
     <!-- development version, includes helpful console warnings -->
