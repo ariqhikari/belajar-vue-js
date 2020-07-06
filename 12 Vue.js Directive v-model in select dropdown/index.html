@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Directive v-model in dropdown</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="text">
+            <input type="text" v-model="message">
+            <br>
+            {{ message }}
+            <br>
+        </div>
+        <div class="textarea">
+            <textarea cols="30" rows="10" v-model="textarea"></textarea>
+            <br>
+            <p style="white-space:pre-line">{{ textarea }}</p>
+            <br>
+        </div>
+        <div class="radiobutton">
+            <input type="radio" v-model="radiobutton" value="option-1"> Option 1
+            <br>
+            <input type="radio" v-model="radiobutton" value="option-2"> Option 2
+            <br>
+            <p>Your choice is : {{ radiobutton }}</p>
+            <br>
+        </div>
+        <div class="checkbox">
+            <label for="">Wacthing Movie</label>
+            <input type="checkbox" value="watching-movie" v-model="checkbox">
+            <br>
+            <label for="">Playing Game</label>
+            <input type="checkbox" value="playing-game" v-model="checkbox">
+            <br>
+            <label for="">Swimming</label>
+            <input type="checkbox" value="swimming" v-model="checkbox">
+            <br>
+            <p>My hobbies are : {{ checkbox }}</p>
+            <ul>
+                <li v-for="hobby in checkbox">{{ hobby }}</li>
+            </ul>
+            <br>
+        </div>
+        <div class="select">
+            <p>Choice your favorite programming language : </p>
+            <select v-model="select" multiple>
+                <option value="" disabled>Choice programming language</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+            </select>
+            <p>Your favorite programming language is : {{ select }}</p>
+            <ul>
+                <li v-for="language in select">{{ language }}</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
